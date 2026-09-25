@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOUS UNIS — Le mouvement des supporters</title>
+  <meta name="description" content="TOUS UNIS : rejoignez le mouvement des supporters et soutenez les projets de votre club.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Kaushan+Script&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="TOUS UNIS">
+        <span class="logo__block">TOUS</span><span class="logo__script">unis</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#mission" data-i18n="nav.mission">Mission</a>
+        <a href="#adhesion" data-i18n="nav.membership">Adhésion</a>
+        <a href="#projets" data-i18n="nav.projects">Projets</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#rejoindre" class="btn btn--small" data-i18n="nav.join">Rejoindre</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button type="button" class="lang__btn" data-lang="fr">FR</button>
+          <button type="button" class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__stripes" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__kicker" data-i18n="hero.kicker">Le mouvement des supporters</p>
+        <h1 class="hero__title">
+          <span class="outline" data-i18n="hero.title1">Une seule voix,</span>
+          <span class="script" data-i18n="hero.title2">un seul cœur</span>
+        </h1>
+        <p class="hero__lead" data-i18n="hero.lead">Chaque adhésion finance la formation des jeunes, les infrastructures et l'avenir du club. Ensemble, on pèse.</p>
+        <div class="hero__cta">
+          <a href="#rejoindre" class="btn btn--light" data-i18n="hero.cta">Rejoindre le mouvement</a>
+          <a href="#adhesion" class="btn btn--ghost" data-i18n="hero.cta2">Voir les formules</a>
+        </div>
+        <div class="hero__counter">
+          <span class="counter" data-target="48750">0</span>
+          <span data-i18n="hero.members">supporters déjà membres</span>
+        </div>
+      </div>
+      <a href="#chiffres" class="hero__scroll" aria-label="Défiler">↓</a>
+    </section>
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span data-i18n="ticker">TOUS UNIS ★ ALLEZ LES ROUGES ★ UNE SEULE VOIX ★ POUR LE CLUB ★ </span>
+        <span data-i18n="ticker">TOUS UNIS ★ ALLEZ LES ROUGES ★ UNE SEULE VOIX ★ POUR LE CLUB ★ </span>
+      </div>
+    </div>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats" id="chiffres">
+      <div class="container stats__grid">
+        <div class="stat"><span class="stat__num counter" data-target="48750">0</span><span class="stat__label" data-i18n="stats.members">membres</span></div>
+        <div class="stat"><span class="stat__num counter" data-target="62">0</span><span class="stat__label" data-i18n="stats.countries">pays représentés</span></div>
+        <div class="stat"><span class="stat__num counter" data-target="1250000" data-suffix=" DT">0</span><span class="stat__label" data-i18n="stats.raised">collectés</span></div>
+        <div class="stat"><span class="stat__num counter" data-target="14">0</span><span class="stat__label" data-i18n="stats.projects">projets financés</span></div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION ===== -->
+    <section class="section mission" id="mission">
+      <div class="container mission__grid">
+        <div>
+          <h2 class="section__title" data-i18n="mission.title">Notre mission</h2>
+          <p class="section__lead" data-i18n="mission.lead">TOUS UNIS rassemble les supporters du monde entier autour d'un objectif simple : donner au club les moyens de ses ambitions.</p>
+        </div>
+        <ul class="pillars">
+          <li class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">⚽</span>
+            <h3 data-i18n="mission.p1.t">Former</h3>
+            <p data-i18n="mission.p1.d">Soutenir l'académie et les jeunes talents de demain.</p>
+          </li>
+          <li class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">🏟️</span>
+            <h3 data-i18n="mission.p2.t">Bâtir</h3>
+            <p data-i18n="mission.p2.d">Moderniser les terrains, les vestiaires et le centre d'entraînement.</p>
+          </li>
+          <li class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">🤝</span>
+            <h3 data-i18n="mission.p3.t">Rassembler</h3>
+            <p data-i18n="mission.p3.d">Créer une communauté fière, transparente et solidaire.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== MEMBERSHIP ===== -->
+    <section class="section tiers" id="adhesion">
+      <div class="container">
+        <h2 class="section__title section__title--center" data-i18n="tiers.title">Choisis ta formule</h2>
+        <p class="section__lead section__lead--center" data-i18n="tiers.lead">Trois façons de porter les couleurs. Une seule famille.</p>
+
+        <div class="tiers__grid">
+          <article class="tier reveal">
+            <h3 class="tier__name" data-i18n="tiers.t1.name">Supporter</h3>
+            <p class="tier__price">30 <small data-i18n="tiers.perYear">DT / an</small></p>
+            <ul class="tier__list">
+              <li data-i18n="tiers.t1.f1">Carte de membre numérique</li>
+              <li data-i18n="tiers.t1.f2">Newsletter exclusive</li>
+              <li data-i18n="tiers.t1.f3">Vote sur les projets</li>
+            </ul>
+            <a href="#rejoindre" class="btn btn--outline" data-tier="supporter" data-i18n="tiers.choose">Choisir</a>
+          </article>
+
+          <article class="tier tier--featured reveal">
+            <span class="tier__badge" data-i18n="tiers.popular">Le plus populaire</span>
+            <h3 class="tier__name" data-i18n="tiers.t2.name">Ultra</h3>
+            <p class="tier__price">90 <small data-i18n="tiers.perYear">DT / an</small></p>
+            <ul class="tier__list">
+              <li data-i18n="tiers.t2.f1">Tous les avantages Supporter</li>
+              <li data-i18n="tiers.t2.f2">Écharpe officielle du mouvement</li>
+              <li data-i18n="tiers.t2.f3">Priorité billetterie</li>
+              <li data-i18n="tiers.t2.f4">Rencontres avec les joueurs</li>
+            </ul>
+            <a href="#rejoindre" class="btn btn--light" data-tier="ultra" data-i18n="tiers.choose">Choisir</a>
+          </article>
+
+          <article class="tier reveal">
+            <h3 class="tier__name" data-i18n="tiers.t3.name">Légende</h3>
+            <p class="tier__price">250 <small data-i18n="tiers.perYear">DT / an</small></p>
+            <ul class="tier__list">
+              <li data-i18n="tiers.t3.f1">Tous les avantages Ultra</li>
+              <li data-i18n="tiers.t3.f2">Nom gravé sur le mur des légendes</li>
+              <li data-i18n="tiers.t3.f3">Visite des coulisses</li>
+              <li data-i18n="tiers.t3.f4">Maillot collector signé</li>
+            </ul>
+            <a href="#rejoindre" class="btn btn--outline" data-tier="legende" data-i18n="tiers.choose">Choisir</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOAL / PROJECTS ===== -->
+    <section class="section projects" id="projets">
+      <div class="container">
+        <h2 class="section__title" data-i18n="projects.title">Projets en cours</h2>
+
+        <div class="goal reveal">
+          <div class="goal__head">
+            <strong data-i18n="projects.goal">Objectif saison : nouveau centre de formation</strong>
+            <span><b>1 250 000</b> / 2 000 000 DT</span>
+          </div>
+          <div class="goal__bar"><div class="goal__fill" style="--p:62.5%"></div></div>
+        </div>
+
+        <div class="projects__grid">
+          <article class="project reveal">
+            <div class="project__img project__img--1" aria-hidden="true"></div>
+            <div class="project__body">
+              <span class="tag tag--done" data-i18n="projects.done">Réalisé</span>
+              <h3 data-i18n="projects.p1.t">Pelouse hybride</h3>
+              <p data-i18n="projects.p1.d">Nouveau terrain d'entraînement pour l'équipe première et les U19.</p>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__img project__img--2" aria-hidden="true"></div>
+            <div class="project__body">
+              <span class="tag" data-i18n="projects.ongoing">En cours</span>
+              <h3 data-i18n="projects.p2.t">Bourses académie</h3>
+              <p data-i18n="projects.p2.d">50 bourses d'études pour les jeunes joueurs de l'académie.</p>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__img project__img--3" aria-hidden="true"></div>
+            <div class="project__body">
+              <span class="tag" data-i18n="projects.ongoing">En cours</span>
+              <h3 data-i18n="projects.p3.t">Salle de récupération</h3>
+              <p data-i18n="projects.p3.d">Équipements médicaux et de récupération dernière génération.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section voices">
+      <div class="voices__stripes" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section__title section__title--center section__title--light" data-i18n="voices.title">La voix du virage</h2>
+        <div class="voices__grid">
+          <figure class="voice reveal">
+            <blockquote data-i18n="voices.q1">« Je suis à Montréal, mais avec TOUS UNIS je me sens au stade chaque week-end. »</blockquote>
+            <figcaption>Sami, <span data-i18n="voices.member">membre Ultra</span></figcaption>
+          </figure>
+          <figure class="voice reveal">
+            <blockquote data-i18n="voices.q2">« Voir le terrain qu'on a financé ensemble, c'est une fierté immense. »</blockquote>
+            <figcaption>Ines, <span data-i18n="voices.member2">membre Légende</span></figcaption>
+          </figure>
+          <figure class="voice reveal">
+            <blockquote data-i18n="voices.q3">« Transparent, simple, et ça a du sens. J'ai inscrit toute ma famille. »</blockquote>
+            <figcaption>Karim, <span data-i18n="voices.member3">membre Supporter</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container faq__inner">
+        <h2 class="section__title" data-i18n="faq.title">Questions fréquentes</h2>
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">À quoi sert mon adhésion ?</summary>
+          <p data-i18n="faq.a1">100 % des fonds nets sont affectés aux projets votés par les membres. Un rapport est publié chaque trimestre.</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">Puis-je adhérer depuis l'étranger ?</summary>
+          <p data-i18n="faq.a2">Oui, le mouvement est ouvert aux supporters du monde entier.</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">Comment voter pour les projets ?</summary>
+          <p data-i18n="faq.a3">Chaque membre reçoit un accès à l'espace de vote au début de chaque saison.</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">Puis-je changer de formule ?</summary>
+          <p data-i18n="faq.a4">Oui, à tout moment : la différence est simplement calculée au prorata.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== JOIN FORM ===== -->
+    <section class="section join" id="rejoindre">
+      <div class="container join__grid">
+        <div>
+          <h2 class="section__title section__title--light" data-i18n="join.title">Rejoins le mouvement</h2>
+          <p class="join__lead" data-i18n="join.lead">Remplis le formulaire, on t'envoie ta carte de membre et les prochaines étapes par e-mail.</p>
+        </div>
+
+        <form class="form" id="joinForm" novalidate>
+          <div class="form__row">
+            <label>
+              <span data-i18n="join.first">Prénom</span>
+              <input type="text" name="firstname" required autocomplete="given-name">
+            </label>
+            <label>
+              <span data-i18n="join.last">Nom</span>
+              <input type="text" name="lastname" required autocomplete="family-name">
+            </label>
+          </div>
+          <label>
+            <span data-i18n="join.email">E-mail</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span data-i18n="join.country">Pays</span>
+            <input type="text" name="country" required autocomplete="country-name">
+          </label>
+          <label>
+            <span data-i18n="join.tier">Formule</span>
+            <select name="tier" id="tierSelect">
+              <option value="supporter" data-i18n="tiers.t1.name">Supporter</option>
+              <option value="ultra" selected data-i18n="tiers.t2.name">Ultra</option>
+              <option value="legende" data-i18n="tiers.t3.name">Légende</option>
+            </select>
+          </label>
+          <label class="form__check">
+            <input type="checkbox" name="consent" required>
+            <span data-i18n="join.consent">J'accepte d'être contacté(e) au sujet de mon adhésion.</span>
+          </label>
+          <button type="submit" class="btn btn--light btn--block" data-i18n="join.submit">Je rejoins TOUS UNIS</button>
+          <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo logo--footer" aria-label="TOUS UNIS">
+        <span class="logo__block">TOUS</span><span class="logo__script">unis</span>
+      </a>
+      <nav class="footer__links">
+        <a href="#mission" data-i18n="nav.mission">Mission</a>
+        <a href="#adhesion" data-i18n="nav.membership">Adhésion</a>
+        <a href="#projets" data-i18n="nav.projects">Projets</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> TOUS UNIS — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
