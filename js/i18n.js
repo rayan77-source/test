@@ -7,6 +7,7 @@ window.I18N = {
     "nav.projects": "Projets",
     "nav.faq": "FAQ",
     "nav.join": "Rejoindre",
+    "nav.space": "Espace membre",
 
     "hero.kicker": "Le mouvement des supporters",
     "hero.title1": "Une seule voix,",
@@ -103,6 +104,7 @@ window.I18N = {
     "nav.projects": "Projects",
     "nav.faq": "FAQ",
     "nav.join": "Join",
+    "nav.space": "Member area",
 
     "hero.kicker": "The supporters' movement",
     "hero.title1": "One voice,",

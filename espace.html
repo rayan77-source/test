@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Espace membre — TOUS UNIS</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Kaushan+Script&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/espace.css">
+</head>
+<body class="app">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="side" id="side">
+    <a href="index.html" class="logo side__logo" aria-label="TOUS UNIS">
+      <span class="logo__block">TOUS</span><span class="logo__script">unis</span>
+    </a>
+
+    <div class="side__user">
+      <span class="avatar" id="userAvatar">S</span>
+      <div class="side__user-info">
+        <strong id="userName">Supporter</strong>
+        <small id="userEmail">membre@exemple.com</small>
+      </div>
+    </div>
+
+    <nav class="side__nav" aria-label="Espace membre">
+      <a href="#matchs" data-view="matchs"><span aria-hidden="true">⚽</span><span data-t="nav.matches">Matchs</span></a>
+      <a href="#projets" data-view="projets"><span aria-hidden="true">🏗️</span><span data-t="nav.projects">Projets</span></a>
+      <a href="#classement" data-view="classement"><span aria-hidden="true">🏆</span><span data-t="nav.standings">Classement</span></a>
+      <a href="#parrainages" data-view="parrainages"><span aria-hidden="true">🤝</span><span data-t="nav.referrals">Parrainages</span></a>
+      <a href="#tickets" data-view="tickets"><span aria-hidden="true">🎟️</span><span data-t="nav.tickets">Mes tickets</span><b class="pill" id="ticketCount" hidden>0</b></a>
+      <a href="#profil" data-view="profil"><span aria-hidden="true">👤</span><span data-t="nav.profile">Profil</span></a>
+    </nav>
+
+    <div class="side__bottom">
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" class="lang__btn" data-lang="fr">FR</button>
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+      </div>
+      <a href="index.html" class="side__link"><span aria-hidden="true">↩</span><span data-t="nav.back">Retour au site</span></a>
+    </div>
+  </aside>
+
+  <div class="side__backdrop" id="backdrop"></div>
+
+  <!-- ===== MAIN ===== -->
+  <div class="app__main">
+    <header class="topbar">
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="side">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo" aria-label="TOUS UNIS">
+        <span class="logo__block">TOUS</span><span class="logo__script">unis</span>
+      </a>
+    </header>
+
+    <p class="demo-banner" data-t="demo">Version de démonstration : aucune donnée n'est envoyée et aucun paiement n'est effectué.</p>
+
+    <!-- MATCHS -->
+    <section class="view" id="view-matchs">
+      <div class="next" id="nextMatch"></div>
+
+      <h1 class="view__title" data-t="matches.title">Matchs à venir</h1>
+      <p class="view__lead" data-t="matches.lead">Soutiens ton équipe, à domicile comme à l'extérieur.</p>
+
+      <div class="tabs" role="tablist">
+        <button role="tab" class="tab is-active" data-filter="all" data-t="tabs.all">Tous les matchs</button>
+        <button role="tab" class="tab" data-filter="upcoming" data-t="tabs.upcoming">À venir</button>
+        <button role="tab" class="tab" data-filter="finished" data-t="tabs.finished">Terminés</button>
+      </div>
+      <div class="cards" id="matchList"></div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="view" id="view-projets" hidden>
+      <h1 class="view__title" data-t="projects.title">Projets</h1>
+      <p class="view__lead" data-t="projects.lead">Les projets financés par les membres, en toute transparence.</p>
+      <div class="cards" id="projectList"></div>
+    </section>
+
+    <!-- CLASSEMENT -->
+    <section class="view" id="view-classement" hidden>
+      <h1 class="view__title" data-t="standings.title">Classement</h1>
+      <p class="view__lead" data-t="standings.lead">Classement du championnat (données d'exemple).</p>
+      <div class="panel table-wrap">
+        <table class="table" id="standings">
+          <thead>
+            <tr>
+              <th>#</th><th data-t="standings.team">Équipe</th>
+              <th data-t="standings.p">J</th><th data-t="standings.w">G</th><th data-t="standings.d">N</th><th data-t="standings.l">P</th>
+              <th data-t="standings.diff">Diff.</th><th>Pts</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PARRAINAGES -->
+    <section class="view" id="view-parrainages" hidden>
+      <h1 class="view__title" data-t="ref.title">Parrainages</h1>
+      <p class="view__lead" data-t="ref.lead">Invite tes amis à rejoindre le mouvement et débloque des récompenses.</p>
+      <div class="ref">
+        <div class="panel ref__code">
+          <span data-t="ref.yourCode">Ton code de parrainage</span>
+          <strong id="refCode">TU-0000</strong>
+          <button class="btn btn--small" id="copyRef" data-t="ref.copy">Copier le lien</button>
+          <small id="copyMsg" role="status"></small>
+        </div>
+        <div class="panel">
+          <h3 data-t="ref.rewards">Récompenses</h3>
+          <ol class="rewards">
+            <li><b>3</b> <span data-t="ref.r1">filleuls : sticker pack collector</span></li>
+            <li><b>10</b> <span data-t="ref.r2">filleuls : écharpe du mouvement</span></li>
+            <li><b>25</b> <span data-t="ref.r3">filleuls : passage en formule Légende</span></li>
+          </ol>
+          <p class="muted"><span data-t="ref.count">Filleuls inscrits</span> : <b>0</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section class="view" id="view-tickets" hidden>
+      <h1 class="view__title" data-t="tickets.title">Mes tickets</h1>
+      <p class="view__lead" data-t="tickets.lead">Tes réservations apparaissent ici.</p>
+      <div class="cards" id="ticketList"></div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="view" id="view-profil" hidden>
+      <h1 class="view__title" data-t="profile.title">Profil</h1>
+      <form class="panel profile" id="profileForm">
+        <label><span data-t="profile.name">Nom complet</span><input name="name" required autocomplete="name"></label>
+        <label><span data-t="profile.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span data-t="profile.phone">Téléphone</span><input name="phone" type="tel" autocomplete="tel"></label>
+        <label><span data-t="profile.tier">Formule</span>
+          <select name="tier">
+            <option value="Supporter">Supporter</option>
+            <option value="Ultra">Ultra</option>
+            <option value="Légende">Légende</option>
+          </select>
+        </label>
+        <button class="btn btn--small" type="submit" data-t="profile.save">Enregistrer</button>
+        <small id="profileMsg" role="status"></small>
+      </form>
+    </section>
+  </div>
+
+  <!-- ===== MODAL RÉSERVATION ===== -->
+  <dialog class="modal" id="bookModal">
+    <form method="dialog" class="modal__box" id="bookForm">
+      <h2 data-t="book.title">Réserver des places</h2>
+      <div class="modal__match" id="bookMatch"></div>
+      <label class="qty">
+        <span data-t="book.qty">Nombre de places</span>
+        <div class="qty__ctrl">
+          <button type="button" data-step="-1" aria-label="−">−</button>
+          <input type="number" id="bookQty" value="1" min="1" max="6" readonly>
+          <button type="button" data-step="1" aria-label="+">+</button>
+        </div>
+      </label>
+      <p class="modal__total"><span data-t="book.total">Total</span> : <b id="bookTotal">0 TND</b></p>
+      <p class="muted small" data-t="book.demo">Démo : la réservation est enregistrée uniquement dans ce navigateur, sans paiement.</p>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--outline" value="cancel" id="bookCancel" data-t="book.cancel">Annuler</button>
+        <button type="submit" class="btn btn--small" value="ok" data-t="book.confirm">Confirmer</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/espace.js"></script>
+</body>
+</html>

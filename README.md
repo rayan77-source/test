@@ -21,10 +21,13 @@ Puis ouvrir http://localhost:8080
 ## Structure
 
 ```
-index.html        page unique (toutes les sections)
+index.html        site vitrine (toutes les sections)
+espace.html       espace membre : matchs, projets, classement, parrainages, tickets, profil
 css/style.css     styles et couleurs (variables en haut du fichier)
 js/i18n.js        textes FR / EN
 js/main.js        langue, menu mobile, compteurs, animations, formulaire
+js/espace.js      espace membre : données d'exemple, traductions, réservation (démo)
+css/espace.css    styles de l'espace membre
 assets/           favicon
 assets/images/    vos photos (voir assets/images/LISEZMOI.md)
 ```
@@ -36,6 +39,17 @@ assets/images/    vos photos (voir assets/images/LISEZMOI.md)
 - **Formulaire** : il valide les champs mais n'envoie rien. Branchez-le dans `js/main.js`
   (repère `TODO`) à un service comme Formspree ou Netlify Forms.
 - **Photos** : déposez-les dans `assets/images/` avec les noms indiqués dans `assets/images/LISEZMOI.md`.
+
+## Espace membre (`espace.html`)
+
+Accessible depuis le lien « Espace membre » du menu. C'est une **démo sans serveur** :
+- les matchs, projets et le classement sont des **données d'exemple** (équipes fictives),
+  modifiables en haut de `js/espace.js` (`MATCHES`, `PROJECTS`, `STANDINGS`) ;
+- la réservation, le profil et le code de parrainage sont enregistrés **uniquement dans le
+  navigateur** (localStorage) : aucun paiement, aucun envoi de données.
+
+Pour une vraie billetterie, il faudra un backend (comptes, base de données) et un
+prestataire de paiement (ex. Konnect, Flouci, Stripe).
 
 ## Mettre en ligne
 

@@ -1,0 +1,187 @@
+/* ==========================================================
+   TOUS UNIS — Espace membre (s'appuie sur les variables de style.css)
+   ========================================================== */
+.app { background: #f6f6f7; display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+
+/* ---------- Sidebar ---------- */
+.side {
+  position: sticky; top: 0; height: 100vh;
+  display: flex; flex-direction: column;
+  background: var(--white); border-right: 1px solid #ececef;
+}
+.side__logo { justify-content: center; padding: 24px 16px; border-bottom: 1px solid #ececef; }
+.side__user { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-bottom: 1px solid #ececef; }
+.side__user-info { display: grid; min-width: 0; }
+.side__user-info strong { font-size: .95rem; }
+.side__user-info small { color: var(--grey); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.avatar {
+  flex: none; width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--red); color: var(--white); font-weight: 800;
+}
+.side__nav { display: grid; gap: 2px; padding: 16px 12px; }
+.side__nav a, .side__link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 12px; border-radius: 10px;
+  color: #3a3a3f; font-weight: 500;
+  transition: background .2s, color .2s;
+}
+.side__nav a:hover, .side__link:hover { background: var(--cream); color: var(--red); }
+.side__nav a.is-active { background: var(--red); color: var(--white); font-weight: 600; }
+.side__nav .pill {
+  margin-left: auto; min-width: 22px; padding: 1px 7px; border-radius: 999px;
+  background: var(--black); color: var(--white); font-size: .72rem; text-align: center;
+}
+.side__bottom { margin-top: auto; padding: 16px 12px 20px; border-top: 1px solid #ececef; display: grid; gap: 10px; }
+.side__bottom .lang { justify-self: start; margin-left: 12px; }
+.side__backdrop { display: none; }
+
+/* ---------- Main ---------- */
+.app__main { padding: 24px clamp(16px, 3vw, 40px) 60px; min-width: 0; }
+.topbar { display: none; }
+.demo-banner {
+  margin: 0 0 20px; padding: 10px 16px; border-radius: 10px;
+  background: #fff4d6; color: #6b4e00; font-size: .85rem; font-weight: 500;
+}
+.view__title { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 32px 0 4px; line-height: 1.15; }
+.view > .view__title:first-child { margin-top: 0; }
+.view__lead { margin: 0 0 24px; color: var(--grey); }
+.muted { color: var(--grey); }
+.small { font-size: .85rem; }
+.panel { background: var(--white); border: 1px solid #ececef; border-radius: 16px; padding: 24px; }
+
+/* ---------- Next match hero ---------- */
+.next {
+  position: relative; overflow: hidden; border-radius: 20px;
+  padding: 28px 24px 32px; text-align: center; color: var(--white);
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 36px, transparent 36px 72px),
+    radial-gradient(ellipse at 50% 0%, #7a0008 0%, #3a0004 55%, #1a0002 100%);
+}
+.next__date {
+  display: inline-block; padding: 7px 16px; border-radius: 999px;
+  background: rgba(0,0,0,.45); font-weight: 600; font-size: .9rem;
+}
+.next__teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin: 20px auto 24px; max-width: 560px; }
+.next__vs { font-family: var(--font-block); font-size: 2.4rem; }
+.team { display: grid; justify-items: center; gap: 10px; font-weight: 600; }
+.next .btn { min-width: min(100%, 420px); background: var(--red); color: var(--white); border-radius: 12px; text-transform: none; font-size: 1rem; }
+.next .btn:hover { background: #ff1a28; }
+
+/* Pastille d'équipe générée (remplace un écusson) */
+.badge {
+  --c: var(--red);
+  width: 64px; height: 64px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--c); color: var(--white);
+  font-family: var(--font-block); font-size: 1.2rem;
+  border: 3px solid rgba(255,255,255,.85);
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+.badge--home {
+  background:
+    radial-gradient(circle, var(--white) 0 52%, transparent 53%),
+    repeating-linear-gradient(0deg, var(--red) 0 8px, var(--white) 8px 16px);
+  color: var(--red);
+}
+.badge--sm { width: 52px; height: 52px; font-size: 1rem; }
+.badge--xs { width: 30px; height: 30px; font-size: .7rem; border-width: 2px; box-shadow: none; }
+
+/* ---------- Tabs ---------- */
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid #e2e2e6; margin-bottom: 24px; overflow-x: auto; }
+.tab {
+  background: none; border: 0; padding: 12px 18px; cursor: pointer; white-space: nowrap;
+  font: 500 .95rem var(--font-body); color: var(--grey);
+  border-bottom: 3px solid transparent; margin-bottom: -1px;
+}
+.tab.is-active { color: var(--red); border-bottom-color: var(--red); font-weight: 600; }
+
+/* ---------- Cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.mcard { background: var(--white); border: 1px solid #ececef; border-radius: 16px; padding: 22px; display: grid; gap: 16px; transition: box-shadow .2s, transform .2s; }
+.mcard:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.mcard__teams { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.mcard__vs { font-weight: 800; font-size: 1.6rem; color: #a3a3ab; }
+.mcard__score { font-family: var(--font-block); font-size: 1.6rem; }
+.mcard__row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.mcard__meta { display: grid; gap: 4px; font-size: .88rem; color: var(--grey); }
+.mcard__meta .sport { color: var(--red); font-weight: 600; }
+.mcard__price { text-align: right; }
+.mcard__price b { display: block; font-size: 1.3rem; white-space: nowrap; }
+.app .btn--outline { background: transparent; }
+.mcard__price small { color: #9a9aa2; }
+.mcard .btn { width: 100%; border-radius: 10px; }
+.status { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .72rem; font-weight: 700; text-transform: uppercase; background: #ececef; color: var(--grey); }
+.empty { grid-column: 1 / -1; text-align: center; padding: 48px 16px; color: var(--grey); background: var(--white); border: 1px dashed #d6d6dc; border-radius: 16px; }
+
+/* Projects */
+.pbar { height: 10px; border-radius: 999px; background: #f0f0f2; overflow: hidden; }
+.pbar i { display: block; height: 100%; border-radius: inherit; background: var(--red); }
+
+/* Tickets */
+.ticket { position: relative; border-left: 6px solid var(--red); }
+.ticket__code { font-family: ui-monospace, monospace; font-size: 1.1rem; letter-spacing: .08em; padding: 10px; background: var(--cream); border-radius: 8px; text-align: center; }
+
+/* ---------- Table ---------- */
+.table-wrap { padding: 0; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.table th, .table td { padding: 14px 16px; text-align: center; border-bottom: 1px solid #f0f0f2; }
+.table th:nth-child(2), .table td:nth-child(2) { text-align: left; }
+.table th { font-size: .75rem; text-transform: uppercase; color: var(--grey); letter-spacing: .05em; }
+.table tr.is-us { background: var(--cream); font-weight: 700; }
+.table tr.is-us td:first-child { box-shadow: inset 4px 0 0 var(--red); }
+.table td:last-child { font-weight: 800; }
+
+/* ---------- Referrals ---------- */
+.ref { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ref__code { display: grid; justify-items: start; gap: 12px; }
+.ref__code strong { font-family: var(--font-block); font-size: 2.2rem; color: var(--red); }
+.ref h3 { margin: 0 0 12px; }
+.rewards { margin: 0 0 16px; padding-left: 0; list-style: none; display: grid; gap: 10px; }
+.rewards b { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--red); color: var(--white); margin-right: 8px; }
+
+/* ---------- Profile ---------- */
+.profile { display: grid; gap: 16px; max-width: 560px; }
+.profile label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; }
+.profile input, .profile select { padding: 12px 14px; border: 1px solid #dcdce2; border-radius: 10px; font: 500 1rem var(--font-body); }
+.profile input:focus, .profile select:focus { outline: 2px solid var(--red); border-color: transparent; }
+.profile .btn { justify-self: start; }
+
+/* ---------- Modal ---------- */
+.modal { border: 0; border-radius: 20px; padding: 0; width: min(440px, calc(100% - 32px)); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+.modal::backdrop { background: rgba(17,17,17,.55); }
+.modal__box { padding: 28px; display: grid; gap: 16px; }
+.modal__box h2 { margin: 0; }
+.modal__match { padding: 14px; border-radius: 12px; background: var(--cream); font-weight: 600; }
+.modal__match small { display: block; color: var(--grey); font-weight: 500; }
+.qty { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+.qty__ctrl { display: flex; align-items: center; border: 1px solid #dcdce2; border-radius: 10px; overflow: hidden; }
+.qty__ctrl button { width: 40px; height: 40px; border: 0; background: var(--cream); font-size: 1.2rem; cursor: pointer; }
+.qty__ctrl input { width: 48px; text-align: center; border: 0; font: 700 1rem var(--font-body); }
+.modal__total { margin: 0; font-size: 1.1rem; }
+.modal__actions { display: flex; gap: 12px; justify-content: flex-end; }
+.modal__actions .btn { padding: 11px 22px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .side {
+    position: fixed; inset: 0 auto 0 0; width: 280px; z-index: 60;
+    transform: translateX(-100%); transition: transform .3s;
+  }
+  .side.is-open { transform: none; box-shadow: 20px 0 60px rgba(0,0,0,.2); }
+  .side__backdrop.is-open { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(0,0,0,.4); }
+  .topbar {
+    display: flex; align-items: center; gap: 12px;
+    margin: -24px calc(-1 * clamp(16px, 3vw, 40px)) 20px; padding: 12px 16px;
+    background: var(--white); border-bottom: 1px solid #ececef;
+    position: sticky; top: 0; z-index: 40;
+  }
+  .topbar .burger { display: block; }
+  .ref { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .next__vs { font-size: 1.6rem; }
+  .badge { width: 54px; height: 54px; font-size: 1rem; }
+  .table th, .table td { padding: 12px 8px; }
+}
