@@ -108,7 +108,11 @@ a { color: inherit; text-decoration: none; }
   min-height: 100vh; min-height: 100svh;
   display: grid; place-items: center;
   padding: calc(var(--header-h) + 40px) 0 80px;
-  background: radial-gradient(ellipse at 30% 20%, #ff2a36 0%, var(--red) 45%, var(--red-dark) 100%);
+  /* Photo : déposez assets/images/hero.jpg — sinon le dégradé rouge seul s'affiche */
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(255,42,54,.72) 0%, rgba(227,0,15,.78) 45%, rgba(176,0,11,.9) 100%),
+    url("../assets/images/hero.jpg") center / cover no-repeat,
+    var(--red-dark);
   color: var(--white);
   text-align: center;
 }
@@ -232,9 +236,10 @@ a { color: inherit; text-decoration: none; }
 .project { border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
 .project__img { height: 190px; position: relative; }
 .project__img::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 20px, transparent 20px 40px); }
-.project__img--1 { background: linear-gradient(135deg, #1b7a2c, #0f4d1b); }
-.project__img--2 { background: linear-gradient(135deg, var(--red), var(--black)); }
-.project__img--3 { background: linear-gradient(135deg, #2c2c2c, var(--red-dark)); }
+.project__img { background-size: cover; background-position: center; }
+.project__img--1 { background-image: linear-gradient(135deg, rgba(227,0,15,.25), rgba(17,17,17,.35)), url("../assets/images/projet-1.jpg"), linear-gradient(135deg, #1b7a2c, #0f4d1b); }
+.project__img--2 { background-image: linear-gradient(135deg, rgba(227,0,15,.25), rgba(17,17,17,.35)), url("../assets/images/projet-2.jpg"), linear-gradient(135deg, var(--red), var(--black)); }
+.project__img--3 { background-image: linear-gradient(135deg, rgba(227,0,15,.25), rgba(17,17,17,.35)), url("../assets/images/projet-3.jpg"), linear-gradient(135deg, #2c2c2c, var(--red-dark)); }
 .project__body { padding: 24px; }
 .project__body h3 { margin: 12px 0 6px; font-size: 1.25rem; }
 .project__body p { margin: 0; color: var(--grey); }
@@ -242,7 +247,14 @@ a { color: inherit; text-decoration: none; }
 .tag--done { background: #e7f6ea; color: #1b7a2c; }
 
 /* Voices */
-.voices { position: relative; background: var(--red); color: var(--white); overflow: hidden; }
+.voices {
+  position: relative; color: var(--white); overflow: hidden;
+  /* Photo : assets/images/supporters.jpg */
+  background:
+    linear-gradient(rgba(227,0,15,.88), rgba(176,0,11,.92)),
+    url("../assets/images/supporters.jpg") center / cover no-repeat,
+    var(--red);
+}
 .voices__stripes { position: absolute; inset: 0; opacity: .08; background: repeating-linear-gradient(0deg, var(--white) 0 40px, transparent 40px 80px); }
 .voices .container { position: relative; }
 .voices__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }

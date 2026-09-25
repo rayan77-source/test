@@ -25,7 +25,8 @@ index.html        page unique (toutes les sections)
 css/style.css     styles et couleurs (variables en haut du fichier)
 js/i18n.js        textes FR / EN
 js/main.js        langue, menu mobile, compteurs, animations, formulaire
-assets/           favicon et futures images
+assets/           favicon
+assets/images/    vos photos (voir assets/images/LISEZMOI.md)
 ```
 
 ## Personnaliser
@@ -34,7 +35,7 @@ assets/           favicon et futures images
 - **Textes** : modifiez-les dans `js/i18n.js` (FR et EN). Le HTML contient la version FR par défaut.
 - **Formulaire** : il valide les champs mais n'envoie rien. Branchez-le dans `js/main.js`
   (repère `TODO`) à un service comme Formspree ou Netlify Forms.
-- **Photos** : remplacez les dégradés `.project__img--1/2/3` dans le CSS par des images.
+- **Photos** : déposez-les dans `assets/images/` avec les noms indiqués dans `assets/images/LISEZMOI.md`.
 
 ## Mettre en ligne
 
