@@ -94,6 +94,18 @@ window.I18N = {
     "join.error": "Merci de remplir correctement tous les champs.",
     "join.success": "Bienvenue dans la famille, {name} ! Vérifie ta boîte mail.",
 
+    "nav.trophies": "Palmarès",
+    "tro.title": "Palmarès",
+    "tro.football": "Football",
+    "tro.basket": "Basket-ball",
+    "tro.all": "Voir le palmarès complet",
+    "tro.hide": "Masquer le palmarès complet",
+    "tro.league": "Championnats",
+    "tro.cup": "Coupes nationales",
+    "tro.supercup": "Supercoupes",
+    "tro.continental": "Ligues continentales",
+    "tro.regional": "Coupes régionales",
+    "tro.none": "Aucun titre",
     "footer.rights": "Tous droits réservés."
   },
 
@@ -191,6 +203,18 @@ window.I18N = {
     "join.error": "Please fill in all fields correctly.",
     "join.success": "Welcome to the family, {name}! Check your inbox.",
 
+    "nav.trophies": "Honours",
+    "tro.title": "Honours",
+    "tro.football": "Football",
+    "tro.basket": "Basketball",
+    "tro.all": "See full honours list",
+    "tro.hide": "Hide full honours list",
+    "tro.league": "League titles",
+    "tro.cup": "National cups",
+    "tro.supercup": "Super cups",
+    "tro.continental": "Continental titles",
+    "tro.regional": "Regional cups",
+    "tro.none": "No titles yet",
     "footer.rights": "All rights reserved."
   }
 };

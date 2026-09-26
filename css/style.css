@@ -345,3 +345,65 @@ a { color: inherit; text-decoration: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Palmarès ---------- */
+.trophies__grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; align-items: stretch; }
+.trophies__media {
+  position: relative; min-height: 460px; border-radius: 22px; overflow: hidden;
+  display: flex; align-items: flex-end;
+  /* Photo : déposez assets/images/palmares.jpg pour remplacer l'illustration */
+  background:
+    url("../assets/images/palmares.jpg") center / cover no-repeat,
+    radial-gradient(ellipse at 50% 0%, #4a4a57 0%, #26262e 55%, #15151a 100%);
+}
+.trophies__shelf { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 20px rgba(0,0,0,.4)); }
+.trophies__media.has-photo .trophies__shelf { display: none; }
+.trophies__panel { display: flex; flex-direction: column; }
+.trophies__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+
+.seg { display: inline-flex; padding: 4px; border-radius: 999px; background: var(--cream); }
+.seg__btn {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 10px 20px; border-radius: 999px;
+  font: 700 .92rem var(--font-body); color: var(--grey);
+}
+.seg__btn.is-active { background: var(--red); color: var(--white); box-shadow: 0 4px 12px rgba(227,0,15,.3); }
+.link-btn { background: none; border: 0; cursor: pointer; font: 700 .92rem var(--font-body); color: var(--red); padding: 6px 0; }
+.link-btn:hover { text-decoration: underline; }
+
+.trophies__stats { list-style: none; margin: 0 0 32px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 32px; }
+.tstat { display: grid; gap: 6px; }
+.tstat__head { display: flex; align-items: center; gap: 10px; }
+.tstat__head svg { width: 30px; height: 30px; fill: var(--red); flex: none; }
+.tstat__num { font-family: var(--font-block); font-size: 2.2rem; line-height: 1; color: var(--black); }
+.tstat__label { font-size: .88rem; color: var(--grey); font-weight: 500; }
+.tstat__bar { display: block; height: 5px; border-radius: 999px; background: #f1e3e4; overflow: hidden; }
+.tstat__bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--red), #ff5a63); transition: width .45s cubic-bezier(.2,.8,.2,1); }
+
+.year { position: relative; margin-top: auto; display: flex; align-items: center; gap: 12px; }
+.year__track { flex: 1; height: 12px; border-radius: 999px; background: #f1e3e4; overflow: hidden; }
+.year__fill { height: 100%; background: var(--red); border-radius: inherit; transition: width .3s; }
+.year__ctrl { display: flex; align-items: center; gap: 4px; padding: 4px 8px; border: 2px solid var(--red); border-radius: 12px; }
+.year__ctrl button { border: 0; background: none; font-size: 1.3rem; line-height: 1; color: var(--red); cursor: pointer; padding: 2px 6px; }
+.year__ctrl button:disabled { opacity: .3; cursor: default; }
+.year__ctrl output { font-weight: 800; min-width: 3.2em; text-align: center; }
+/* Le curseur natif couvre la barre pour permettre le glisser */
+.year__range { position: absolute; left: 0; right: 110px; top: 50%; translate: 0 -50%; width: calc(100% - 122px); margin: 0; opacity: 0; cursor: pointer; height: 28px; }
+
+.trophies__all { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.trophies__all[hidden] { display: none; }
+.tall { padding: 20px; border-radius: var(--radius); background: var(--cream); }
+.tall h3 { margin: 0 0 12px; font-size: 1rem; }
+.tall h3 small { color: var(--grey); font-weight: 500; }
+.tall__years { display: flex; flex-wrap: wrap; gap: 6px; }
+.tall__years span { padding: 3px 10px; border-radius: 999px; background: var(--white); border: 1px solid #f0cfd1; font-size: .82rem; font-weight: 600; }
+.tall__years span.is-future { opacity: .35; }
+
+@media (max-width: 960px) {
+  .trophies__grid { grid-template-columns: 1fr; gap: 32px; }
+  .trophies__media { min-height: 280px; }
+}
+@media (max-width: 420px) {
+  .trophies__stats { gap: 20px 18px; }
+  .tstat__num { font-size: 1.8rem; }
+}

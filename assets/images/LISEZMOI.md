@@ -9,6 +9,7 @@ Déposez ici vos photos avec **exactement** ces noms. Si un fichier manque, le f
 | `projet-2.jpg`     | Carte projet 2 (académie)       | 800 × 500         |
 | `projet-3.jpg`     | Carte projet 3 (récupération)   | 800 × 500         |
 | `supporters.jpg`   | Fond de « La voix du virage »   | 1920 × 1080       |
+| `palmares.jpg`     | Photo de la section Palmarès    | 1400 × 1000       |
 
 Un filtre rouge est appliqué automatiquement pour rester dans le style « Tribune ».
 Compressez les images (par ex. sur squoosh.app) : visez moins de 300 Ko chacune.

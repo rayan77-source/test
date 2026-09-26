@@ -26,6 +26,7 @@ espace.html       espace membre : matchs, projets, classement, parrainages, tick
 css/style.css     styles et couleurs (variables en haut du fichier)
 js/i18n.js        textes FR / EN
 js/main.js        langue, menu mobile, compteurs, animations, formulaire
+js/palmares.js    section Palmarès : titres par sport et par année (données d'exemple)
 js/espace.js      espace membre : données d'exemple, traductions, réservation (démo)
 css/espace.css    styles de l'espace membre
 assets/           favicon

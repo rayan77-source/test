@@ -19,6 +19,7 @@
     });
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* stockage indisponible */ }
     renderCounters(true);
+    if (window.Palmares) window.Palmares.render(lang, t);
   }
 
   document.querySelectorAll(".lang__btn").forEach((btn) =>
